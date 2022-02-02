@@ -1,4 +1,5 @@
 set background=dark
+set hidden
 colorscheme one
 let g:airline_theme = 'one'
 let g:one_allow_italics = 1 " I love italic for comments
@@ -16,7 +17,7 @@ lua require('plugin-config/nvim-treesitter')
 lua require('plugin-config/nvim-autopairs')
 lua require('plugin-config/rust-tools')
 lua require('plugin-config/telescope')
-lua require('plugin-config/FTerm')
+lua require('plugin-config/toggleterm')
 
 
 

@@ -30,6 +30,6 @@ return require('packer').startup(function(use)
         'nvim-telescope/telescope.nvim',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
-    use "numToStr/FTerm.nvim" --term
+    use "akinsho/toggleterm.nvim" --term
 end)
 
