@@ -18,6 +18,9 @@ lua require('plugin-config/nvim-autopairs')
 lua require('plugin-config/rust-tools')
 lua require('plugin-config/telescope')
 lua require('plugin-config/toggleterm')
+lua require('plugin-config/dap')
+lua require('plugin-config/dapui')
+lua require('plugin-config/hop')
 
 
 
