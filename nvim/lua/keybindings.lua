@@ -50,3 +50,13 @@ map('n','<leader><leader>l',':HopLine<CR>',opt)
 map('n','<leader><leader>s',':HopLineStart<CR>',opt)
 map('n','<leader><leader>/',':HopPattern<CR>',opt)
 
+--window
+map("n", "<space>wv", ":vsp<CR>", opt)
+map("n", "<space>wh", ":sp<CR>", opt)
+map("n", "<sapce>wc", "<C-w>c", opt)
+map("n", "<space>wo", "<C-w>o", opt) -- close others
+
+map("n", "<space>h", "<C-w>h", opt)
+map("n", "<space>j", "<C-w>j", opt)
+map("n", "<space>k", "<C-w>k", opt)
+map("n", "<space>l", "<C-w>l", opt)
