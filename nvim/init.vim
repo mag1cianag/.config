@@ -3,8 +3,9 @@ set hidden
 colorscheme one
 let g:airline_theme = 'one'
 let g:one_allow_italics = 1 " I love italic for comments
-" hi Normal guibg=NONE ctermbg=NONE
+hi Normal guibg=NONE ctermbg=NONE
 set splitright
+set splitbelow
 " basic configuration
 lua require('basic')
 " lsp
