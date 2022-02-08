@@ -44,8 +44,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/maji/.cache/nvim/packer_hererocks/2.0.5/share/lua/5.1/?.lua;/home/maji/.cache/nvim/packer_hererocks/2.0.5/share/lua/5.1/?/init.lua;/home/maji/.cache/nvim/packer_hererocks/2.0.5/lib/luarocks/rocks-5.1/?.lua;/home/maji/.cache/nvim/packer_hererocks/2.0.5/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/maji/.cache/nvim/packer_hererocks/2.0.5/lib/lua/5.1/?.so"
+local package_path_str = "/home/maji/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/maji/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/maji/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/maji/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/maji/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -149,6 +149,13 @@ _G.packer_plugins = {
     path = "/home/maji/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
     url = "https://github.com/simrat39/rust-tools.nvim"
   },
+  ["symbols-outline.nvim"] = {
+    load_after = {},
+    loaded = true,
+    needs_bufread = false,
+    path = "/home/maji/.local/share/nvim/site/pack/packer/opt/symbols-outline.nvim",
+    url = "https://github.com/simrat39/symbols-outline.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/maji/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -163,10 +170,20 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/maji/.local/share/nvim/site/pack/packer/start/vim-one",
     url = "https://github.com/rakr/vim-one"
+  },
+  ["vim-startify"] = {
+    loaded = true,
+    path = "/home/maji/.local/share/nvim/site/pack/packer/start/vim-startify",
+    url = "https://github.com/mhinz/vim-startify"
   }
 }
 
 time([[Defining packer_plugins]], false)
+-- Load plugins in order defined by `after`
+time([[Sequenced loading]], true)
+vim.cmd [[ packadd nvim-lspconfig ]]
+vim.cmd [[ packadd symbols-outline.nvim ]]
+time([[Sequenced loading]], false)
 if should_profile then save_profiles() end
 
 end)

@@ -60,3 +60,6 @@ map("n", "<space>h", "<C-w>h", opt)
 map("n", "<space>j", "<C-w>j", opt)
 map("n", "<space>k", "<C-w>k", opt)
 map("n", "<space>l", "<C-w>l", opt)
+
+-- symbols-outline
+map("n", "K", ":SymbolsOutline<CR>", opt)

@@ -35,6 +35,16 @@ return require('packer').startup(function(use)
     use {
         'phaazon/hop.nvim',
         branch = 'v1', -- optional but strongly recommended
-        }
+    }
+    use "mhinz/vim-startify"
+    use {
+        'simrat39/symbols-outline.nvim',
+        after = "nvim-lspconfig",
+        config = function() 
+            require'symbols-outline'.setup{}
+        end
+
+        
+    }
 end)
 
