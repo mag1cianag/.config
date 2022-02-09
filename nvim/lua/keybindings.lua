@@ -2,10 +2,10 @@ local map = vim.api.nvim_set_keymap
 local opt = {noremap = true,silent = true}
 
 map("i","jk","<esc>",opt)
+map('n', '<leader>d', ':bd<CR>',opt)
 
 -- nvim-tree
 map('n', '<leader>f', ':NvimTreeToggle<CR>',opt)
-map('n', '<leader>d', ':bd<CR>',opt)
 
 -- telescope
 map('n','<space>ff',"<cmd>lua  require('telescope.builtin').find_files()<cr>",opt)
@@ -63,3 +63,16 @@ map("n", "<space>l", "<C-w>l", opt)
 
 -- symbols-outline
 map("n", "K", ":SymbolsOutline<CR>", opt)
+
+-- bufferline
+map('n',"<a->>",":BufferLineMoveNext<CR>",opt)
+map('n',"<a-<>",":BufferLineMovePrev<CR>",opt)
+map('n',"<a-1>",":BufferLineGoToBuffer 1<CR>",opt)
+map('n',"<a-2>",":BufferLineGoToBuffer 2<CR>",opt)
+map('n',"<a-3>",":BufferLineGoToBuffer 3<CR>",opt)
+map('n',"<a-4>",":BufferLineGoToBuffer 4<CR>",opt)
+map('n',"<a-5>",":BufferLineGoToBuffer 5<CR>",opt)
+map('n',"<a-6>",":BufferLineGoToBuffer 6<CR>",opt)
+map('n',"<a-7>",":BufferLineGoToBuffer 7<CR>",opt)
+map('n',"<a-8>",":BufferLineGoToBuffer 8<CR>",opt)
+map('n',"<a-9>",":BufferLineGoToBuffer 9<CR>",opt)
