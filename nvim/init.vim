@@ -9,10 +9,10 @@ set splitbelow
 
 " basic configuration
 lua require('basic')
-lua require('plugins')
-lua require('plugin-config/nvim-autopairs')
 " lsp
 lua require('lsp/lsp')
+lua require('plugins')
+lua require('plugin-config/nvim-autopairs')
 lua require('keybindings')
 lua require('plugin-config/nvim-tree')
 lua require('plugin-config/bufferline')
