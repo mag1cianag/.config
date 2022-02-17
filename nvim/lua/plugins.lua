@@ -2,8 +2,8 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
     --plugins
-    --vim-one
-    use 'rakr/vim-one'
+    --nightfox
+    use 'EdenEast/nightfox.nvim'
     -- bufferline
     use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
     -- nvim-tree 

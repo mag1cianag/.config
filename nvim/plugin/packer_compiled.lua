@@ -105,6 +105,11 @@ _G.packer_plugins = {
     path = "/home/maji/.local/share/nvim/site/pack/packer/start/hop.nvim",
     url = "https://github.com/phaazon/hop.nvim"
   },
+  ["nightfox.nvim"] = {
+    loaded = true,
+    path = "/home/maji/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
+    url = "https://github.com/EdenEast/nightfox.nvim"
+  },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "/home/maji/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
@@ -178,11 +183,6 @@ _G.packer_plugins = {
     path = "/home/maji/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
   },
-  ["vim-one"] = {
-    loaded = true,
-    path = "/home/maji/.local/share/nvim/site/pack/packer/start/vim-one",
-    url = "https://github.com/rakr/vim-one"
-  },
   ["vim-startify"] = {
     loaded = true,
     path = "/home/maji/.local/share/nvim/site/pack/packer/start/vim-startify",
@@ -209,5 +209,6 @@ if should_profile then save_profiles() end
 end)
 
 if not no_errors then
+  error_msg = error_msg:gsub('"', '\\"')
   vim.api.nvim_command('echohl ErrorMsg | echom "Error in packer_compiled: '..error_msg..'" | echom "Please check your config for correctness" | echohl None')
 end

@@ -1,9 +1,8 @@
 set background=dark
 set hidden
-colorscheme one
-let g:airline_theme = 'one'
-let g:one_allow_italics = 1 " I love italic for comments
-hi Normal guibg=NONE ctermbg=NONE
+colorscheme nightfox
+" let g:airline_theme = 'one'
+" hi Normal guibg=NONE ctermbg=NONE
 set splitright
 set splitbelow
 
