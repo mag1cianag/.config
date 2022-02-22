@@ -13,6 +13,7 @@ abbr -a ll exa -l
 abbr -a l exa -al
 abbr -a px4 proxychains4 -q
 abbr -a cat bat
+abbr -a ra ranger
 
 fish_vi_key_bindings
 
