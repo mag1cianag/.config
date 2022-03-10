@@ -3,6 +3,9 @@
 
 local M = {}
 
+local plugin_conf = require "custom.plugins.configs"
+local userPlugins = require "custom.plugins"
+
 M.options = {
    -- custom = {}
    -- general nvim/vim options , check :h optionname to know more about an option
@@ -61,9 +64,9 @@ M.plugins = {
    status = {
       blankline = true, -- indentline stuff
       bufferline = true, -- manage and preview opened buffers
-      colorizer = false, -- color RGB, HEX, CSS, NAME color codes
+      colorizer = true, -- color RGB, HEX, CSS, NAME color codes
       comment = true, -- easily (un)comment code, language aware
-      alpha = false, -- dashboard
+      alpha = true, -- dashboard
       better_escape = true, -- map to <ESC> with no lag
       feline = true, -- statusline
       gitsigns = true,
@@ -82,7 +85,7 @@ M.plugins = {
          lazy_load = true,
       },
       lspconfig = {
-         setup_lspconf = "", -- path of file containing setups of different lsps
+         setup_lspconf = "custom.plugins.lspconfig", -- path of file containing setups of different lsps
       },
       nvimtree = {
          -- packerCompile required after changing lazy_load
@@ -107,9 +110,11 @@ M.plugins = {
       },
       esc_insertmode_timeout = 300,
    },
-   default_plugin_config_replace = {},
+   default_plugin_config_replace = {
+     nvim_treesitter = plugin_conf.treesitter,
+   },
    default_plugin_remove = {},
-   install = nil,
+   install = userPlugins,
 }
 
 -- Don't use a single keymap twice
@@ -123,10 +128,9 @@ M.mappings = {
    misc = {
       cheatsheet = "<leader>ch",
       close_buffer = "<leader>x",
-      copy_whole_file = "<C-a>", -- copy all contents of current buffer
-      copy_to_system_clipboard = "<C-c>", -- copy selected text (visual mode) or curent line (normal)
-      line_number_toggle = "<leader>n", -- toggle line number
-      relative_line_number_toggle = "<leader>rn",
+      cp_whole_file = "<C-a>", -- copy all contents of current buffer
+      lineNR_toggle = "<leader>n", -- toggle line number
+      lineNR_rel_toggle = "<leader>rn",
       update_nvchad = "<leader>uu",
       new_buffer = "<S-t>",
       new_tab = "<C-t>b",
@@ -203,12 +207,12 @@ M.mappings.plugins = {
       float_diagnostics = "ge",
       goto_prev = "[d",
       goto_next = "]d",
-      set_loclist = "<leader>q",
-      formatting = "<leader>fm",
+      set_loclist = "<Bslash>q",
+      formatting = "<Bslash>r",
    },
 
    nvimtree = {
-      toggle = "<C-n>",
+      toggle = "<Bslash>f",
       focus = "<leader>e",
    },
 
